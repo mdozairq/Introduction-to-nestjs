@@ -11,19 +11,19 @@ export class UserService {
         @InjectRepository(UserEntity) private readonly userRepository: Repository<UserEntity> 
     ){}
 
-    create(user: User) : Observable<User>(
-        return from (this.userRepository.save(user))
-    )
+    // create(user: User) : Observable<User>(
+    //     return from (this.userRepository.save(user))
+    // )
 
-    findAll(): Observable<User[]>{
-        return from(this.userRepository.find());
-    }
+    // findAll(): Observable<User[]>{
+    //     return from(this.userRepository.find());
+    // }
 
-    deleteOne(id: number): Observable<any>{
-        return from(this.userRepository.delete(id));
-    }
+    // deleteOne(id: number): Observable<any>{
+    //     return from(this.userRepository.delete(id));
+    // }
 
-    updateOne(id: number, user: User): Observable<any>{
-        return from(this.userRepository.update(id, user));
-    }
+    // updateOne(id: number, user: User): Observable<any>{
+    //     return from(this.userRepository.update(id, user));
+    // }
 }
